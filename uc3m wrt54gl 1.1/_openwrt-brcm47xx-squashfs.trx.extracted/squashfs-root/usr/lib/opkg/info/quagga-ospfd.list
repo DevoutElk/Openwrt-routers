@@ -1,0 +1,3 @@
+/etc/quagga/ospfd.conf.default
+/etc/quagga/ospfd.conf
+/usr/sbin/ospfd

@@ -1,0 +1,14 @@
+Package: nvram
+Version: 7
+Depends: 
+Provides: 
+Source: package/nvram
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: brcm47xx
+Installed-Size: 10092
+Description:  This package contains an utility to manipulate NVRAM on Broadcom based devices.
+ It works on both brcm-2.4 and bcm47xx (Linux 2.6) without using the kernel api.

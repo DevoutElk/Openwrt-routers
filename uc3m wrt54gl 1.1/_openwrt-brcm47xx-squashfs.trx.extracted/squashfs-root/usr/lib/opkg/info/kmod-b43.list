@@ -1,0 +1,16 @@
+/lib/firmware/b43/lp0bsinitvals14.fw
+/lib/firmware/b43/ucode13.fw
+/lib/firmware/b43/lp0bsinitvals15.fw
+/lib/firmware/b43/ucode14.fw
+/etc/modules.d/30-b43
+/lib/modules/2.6.32.27/b43.ko
+/lib/firmware/b43/ucode15.fw
+/lib/firmware/b43/b0g0initvals13.fw
+/lib/firmware/b43/b0g0bsinitvals5.fw
+/lib/firmware/b43/lp0initvals13.fw
+/lib/firmware/b43/lp0initvals14.fw
+/lib/firmware/b43/ucode5.fw
+/lib/firmware/b43/pcm5.fw
+/lib/firmware/b43/lp0initvals15.fw
+/lib/firmware/b43/b0g0initvals5.fw
+/lib/firmware/b43/lp0bsinitvals13.fw

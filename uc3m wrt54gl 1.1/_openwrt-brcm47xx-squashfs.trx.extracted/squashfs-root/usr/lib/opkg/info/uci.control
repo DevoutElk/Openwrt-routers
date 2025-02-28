@@ -1,0 +1,13 @@
+Package: uci
+Version: 12012009.7-4
+Depends: libuci
+Provides: 
+Source: package/uci
+Section: base
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: brcm47xx
+Installed-Size: 6657
+Description:  Utility for the Unified Configuration Interface (UCI)

@@ -1,0 +1,3 @@
+/usr/sbin/zebra
+/etc/quagga/zebra.conf.default
+/etc/quagga/zebra.conf

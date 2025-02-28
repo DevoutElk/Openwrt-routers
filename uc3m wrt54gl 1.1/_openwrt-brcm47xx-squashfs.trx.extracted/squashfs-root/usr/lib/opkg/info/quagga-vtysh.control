@@ -1,0 +1,13 @@
+Package: quagga-vtysh
+Version: 0.99.24-1
+Depends: quagga, quagga-libzebra, libreadline, libncurses
+Provides: 
+Source: feeds/packages/net/quagga
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Vasilis Tsiligiannis <acinonyx@openwrt.gr>
+Architecture: brcm47xx
+Installed-Size: 228120
+Description:  integrated shell for Quagga routing software

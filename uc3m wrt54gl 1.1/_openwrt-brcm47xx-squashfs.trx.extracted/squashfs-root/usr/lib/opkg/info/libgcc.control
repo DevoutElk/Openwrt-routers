@@ -1,0 +1,13 @@
+Package: libgcc
+Version: 4.3.3+cs-43.35
+Depends: 
+Provides: 
+Source: package/base-files
+Section: libs
+Status: unknown hold not-installed
+Essential: yes
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: brcm47xx
+Installed-Size: 25220
+Description:  GCC support library

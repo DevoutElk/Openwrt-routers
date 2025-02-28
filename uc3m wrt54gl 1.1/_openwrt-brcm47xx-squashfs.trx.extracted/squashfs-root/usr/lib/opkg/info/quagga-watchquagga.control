@@ -1,0 +1,13 @@
+Package: quagga-watchquagga
+Version: 0.99.24-1
+Depends: quagga, quagga-libzebra
+Provides: 
+Source: feeds/packages/net/quagga
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Vasilis Tsiligiannis <acinonyx@openwrt.gr>
+Architecture: brcm47xx
+Installed-Size: 11934
+Description:  Quagga watchdog

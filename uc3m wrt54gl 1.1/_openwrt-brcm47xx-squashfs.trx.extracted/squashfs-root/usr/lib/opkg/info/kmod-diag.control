@@ -1,0 +1,13 @@
+Package: kmod-diag
+Version: 2.6.32.27-7.1
+Depends: kernel (=2.6.32.27-1)
+Provides: 
+Source: package/broadcom-diag
+Section: kernel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: brcm47xx
+Installed-Size: 12290
+Description:  Driver for router LEDs and Buttons

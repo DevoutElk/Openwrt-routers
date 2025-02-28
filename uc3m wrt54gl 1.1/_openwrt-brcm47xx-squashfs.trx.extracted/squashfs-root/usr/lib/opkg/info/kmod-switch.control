@@ -1,0 +1,13 @@
+Package: kmod-switch
+Version: 2.6.32.27-4
+Depends: kernel (=2.6.32.27-1)
+Provides: 
+Source: package/switch
+Section: kernel
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: brcm47xx
+Installed-Size: 14495
+Description:  This package contains switch drivers for ADM6996L and BCM53XX RoboSwitch.

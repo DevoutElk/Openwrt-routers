@@ -1,0 +1,123 @@
+#!/bin/sh /etc/rc.common
+# [2010-08-15] cjbc
+START=38
+
+start() {
+	mac_wifi=`nvram get il0macaddr`
+	byte0=`echo ${mac_wifi} | cut -d ':' -f 1`
+	byte1=`echo ${mac_wifi} | cut -d ':' -f 2`
+	byte2=`echo ${mac_wifi} | cut -d ':' -f 3`
+	byte3=`echo ${mac_wifi} | cut -d ':' -f 4`
+	byte4=`echo ${mac_wifi} | cut -d ':' -f 5`
+	byte5=`echo ${mac_wifi} | cut -d ':' -f 6`
+	# byte0=locally administered MAC address
+	byte0=$((byte0|0x02))
+	byte2_eth0_0=00
+	byte2_eth0_1=01
+	byte2_eth0_2=02
+	byte2_eth0_3=03
+	byte2_eth0_4=04
+	mac_eth0_0=${byte0}:${byte1}:${byte2_eth0_0}:${byte3}:${byte4}:${byte5}
+	mac_eth0_1=${byte0}:${byte1}:${byte2_eth0_1}:${byte3}:${byte4}:${byte5}
+	mac_eth0_2=${byte0}:${byte1}:${byte2_eth0_2}:${byte3}:${byte4}:${byte5}
+	mac_eth0_3=${byte0}:${byte1}:${byte2_eth0_3}:${byte3}:${byte4}:${byte5}
+	mac_eth0_4=${byte0}:${byte1}:${byte2_eth0_4}:${byte3}:${byte4}:${byte5}
+
+cat > /etc/config/network << END_NETWORK.UC3M.EDIT
+#### VLAN configuration 
+config switch eth0
+	option enable   1
+
+config switch_vlan eth0_0
+	option device   "eth0"
+	option vlan     0
+	option ports    "4 5"
+
+config switch_vlan eth0_1
+	option device   "eth0"
+	option vlan     1
+	option ports    "3 5"
+
+config switch_vlan eth0_2
+	option device   "eth0"
+	option vlan     2
+	option ports    "2 5"
+
+config switch_vlan eth0_3
+	option device   "eth0"
+	option vlan     3
+	option ports    "1 5"
+
+config switch_vlan eth0_4
+	option device   "eth0"
+	option vlan     4
+	option ports    "0 5"
+
+#### Loopback configuration
+config interface loopback
+	option ifname	"lo"
+	option proto	static
+	option ipaddr	127.0.0.1
+	option netmask	255.0.0.0
+
+
+#### LAN configuration
+config interface vlan0
+	option ifname	"eth0.0"
+	option proto	static
+	option ipaddr	192.168.0.1
+	option netmask	255.255.255.0
+	option macaddr	${mac_eth0_0}
+
+config interface vlan1
+	option ifname	"eth0.1"
+	option proto	static
+	option ipaddr	192.168.1.1
+	option netmask	255.255.255.0
+	option macaddr	${mac_eth0_1}
+
+config interface vlan2
+	option ifname	"eth0.2"
+	option proto	static
+	option ipaddr	192.168.2.1
+	option netmask	255.255.255.0
+	option macaddr	${mac_eth0_2}
+
+config interface vlan3
+	option ifname	"eth0.3"
+	option proto	static
+	option ipaddr	192.168.3.1
+	option netmask	255.255.255.0
+	option macaddr	${mac_eth0_3}
+
+config interface vlan4
+	option ifname	"eth0.4"
+	option proto	static
+	option ipaddr	192.168.4.1
+	option netmask	255.255.255.0
+	option macaddr	${mac_eth0_4}
+
+#### WLAN configuration
+config interface wl0
+	option ifname	"wl0"
+	option proto	static
+	option ipaddr	192.168.5.1
+	option netmask	255.255.255.0
+END_NETWORK.UC3M.EDIT
+
+	rm /etc/config/wireless
+	rm /etc/quagga/*.sav
+	cp /etc/quagga/zebra.conf.default /etc/quagga/zebra.conf
+	cp /etc/quagga/ripd.conf.default /etc/quagga/ripd.conf
+	cp /etc/quagga/ospfd.conf.default /etc/quagga/ospfd.conf
+	cp /etc/quagga/bgpd.conf.default /etc/quagga/bgpd.conf
+	chmod +s /usr/bin/wifi_uc3m
+	chmod +s /usr/bin/stop_routing
+	#chmod +s /usr/bin/start_snmpd
+	chmod +s /usr/bin/routing_uc3m
+	#chmod +s /usr/bin/snmpd_uc3m
+	chmod +s /usr/sbin/wl
+	chmod +s /usr/sbin/iwconfig
+	find /usr/ /etc/ -user alumno -exec rm -rf {} \;
+
+}

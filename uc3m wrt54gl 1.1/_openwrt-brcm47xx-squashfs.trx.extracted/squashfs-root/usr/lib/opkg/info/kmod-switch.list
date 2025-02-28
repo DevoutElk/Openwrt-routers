@@ -1,0 +1,5 @@
+/lib/modules/2.6.32.27/switch-adm.ko
+/etc/modules.d/20-switch
+/lib/modules/2.6.32.27/switch-robo.ko
+/lib/network/switch.sh
+/lib/modules/2.6.32.27/switch-core.ko

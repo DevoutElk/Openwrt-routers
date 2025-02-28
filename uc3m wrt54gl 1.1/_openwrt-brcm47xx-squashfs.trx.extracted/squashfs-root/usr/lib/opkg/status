@@ -1,0 +1,377 @@
+Package: libc
+Version: 0.9.30.1-43.35
+Provides:
+Status: install hold installed
+Essential: yes
+Architecture: brcm47xx
+Installed-Time: 1503488928
+
+Package: opkg
+Version: 576-2
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Conffiles:
+ /etc/opkg.conf d34190b170bf394d8b2ea2a21929e24c
+Installed-Time: 1503488936
+
+Package: ip
+Version: 2.6.29-1-2
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Conffiles:
+ /etc/iproute2/rt_tables a1313318d6778fe6b8c680248ef5a463
+Installed-Time: 1503488930
+
+Package: iw
+Version: 0.9.22-2
+Depends: libnl-tiny
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488930
+
+Package: busybox
+Version: 1.15.3-3.4
+Provides:
+Status: install user installed
+Essential: yes
+Architecture: brcm47xx
+Installed-Time: 1503488928
+
+Package: kmod-diag
+Version: 2.6.32.27-7.1
+Depends: kernel (= 2.6.32.27-1)
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488928
+
+Package: quagga-libospf
+Version: 0.99.24-1
+Depends: quagga, quagga-libzebra
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488929
+
+Package: base-files
+Version: 43.35-r33081
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Conffiles:
+ /etc/banner 276de38c9b88044212fe1b6d078572cc
+ /etc/hosts 89f616defd47b22702e3158ca7e70487
+ /etc/inittab b32300b974fdaf89bf58c80a144d6d3a
+ /etc/group 4a116d818b2f49e14939d581ec786de1
+ /etc/passwd bf1b2bcf97d794a5d84b1ee10cdfa24f
+ /etc/profile d514cdb294e40adfb7a1e4943e505b60
+ /etc/shells 725ba6f40dff0612f61ecd3f171bb3e1
+ /etc/sysctl.conf 62deb895be1a7f496040187b7c930e4e
+ /etc/rc.local 6f8bfdaf36d3ec4aa9be6e96fa61d32b
+ /etc/sysupgrade.conf f91aef484370cefee501d64b5725c1d2
+ /etc/config/system 3fd361b4ee395dae0a122edf5209c08b
+ /etc/config/system 3fd361b4ee395dae0a122edf5209c08b
+Installed-Time: 1503488928
+
+Package: quagga-bgpd
+Version: 0.99.24-1
+Depends: quagga, quagga-libzebra
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Conffiles:
+ /etc/quagga/bgpd.conf c0267daa4f8da5ac588d18f91a530115
+ /etc/quagga/bgpd.conf.default c0267daa4f8da5ac588d18f91a530115
+Installed-Time: 1503488929
+
+Package: kmod-switch
+Version: 2.6.32.27-4
+Depends: kernel (= 2.6.32.27-1)
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488936
+
+Package: quagga-watchquagga
+Version: 0.99.24-1
+Depends: quagga, quagga-libzebra
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488929
+
+Package: dnsmasq
+Version: 2.55-6.1
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Conffiles:
+ /etc/config/dhcp 326e2116bd9bc3ecc5be4f75cd1e7647
+ /etc/dnsmasq.conf 7cf378e58d3fe5db31f4116a16c15c61
+Installed-Time: 1503488929
+
+Package: kmod-crc-ccitt
+Version: 2.6.32.27-1
+Depends: kernel (= 2.6.32.27-1)
+Provides:
+Status: install hold installed
+Architecture: brcm47xx
+Installed-Time: 1503488931
+
+Package: quagga-vtysh
+Version: 0.99.24-1
+Depends: quagga, quagga-libzebra, libreadline, libncurses
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488929
+
+Package: quagga-ospfd
+Version: 0.99.24-1
+Depends: quagga, quagga-libospf
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Conffiles:
+ /etc/quagga/ospfd.conf 9eed96fec9b786941115d2911673f9b7
+ /etc/quagga/ospfd.conf.default 9eed96fec9b786941115d2911673f9b7
+Installed-Time: 1503488929
+
+Package: quagga-ripngd
+Version: 0.99.24-1
+Depends: quagga, quagga-libzebra
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Conffiles:
+ /etc/quagga/ripngd.conf 4e41e5ae1b4776925a6be3a74af17a8d
+Installed-Time: 1503488929
+
+Package: libuci
+Version: 12012009.7-4
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488936
+
+Package: uci
+Version: 12012009.7-4
+Depends: libuci
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488936
+
+Package: wpad-mini
+Version: 20111103-3
+Depends: libnl-tiny
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488929
+
+Package: dropbear
+Version: 0.53.1-6
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Conffiles:
+ /etc/dropbear/dropbear_rsa_host_key d41d8cd98f00b204e9800998ecf8427e
+ /etc/dropbear/dropbear_dss_host_key d41d8cd98f00b204e9800998ecf8427e
+ /etc/config/dropbear 4ff9c827d4f95ca5082a5520c03e1419
+Installed-Time: 1503488929
+
+Package: kmod-crypto-aes
+Version: 2.6.32.27-1
+Depends: kernel (= 2.6.32.27-1), kmod-crypto-core
+Provides:
+Status: install hold installed
+Architecture: brcm47xx
+Installed-Time: 1503488930
+
+Package: mtd
+Version: 13
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488935
+
+Package: kmod-crypto-core
+Version: 2.6.32.27-1
+Depends: kernel (= 2.6.32.27-1)
+Provides:
+Status: install hold installed
+Architecture: brcm47xx
+Installed-Time: 1503488930
+
+Package: libgcc
+Version: 4.3.3+cs-43.35
+Provides:
+Status: install hold installed
+Essential: yes
+Architecture: brcm47xx
+Installed-Time: 1503488928
+
+Package: libreadline
+Version: 5.2-2
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488931
+
+Package: nvram
+Version: 7
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488936
+
+Package: quagga-libzebra
+Version: 0.99.24-1
+Depends: quagga
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488929
+
+Package: librt
+Version: 0.9.30.1-43.35
+Provides:
+Status: install hold installed
+Essential: yes
+Architecture: brcm47xx
+Installed-Time: 1503488928
+
+Package: kmod-mac80211
+Version: 2.6.32.27+2011-12-01-1
+Depends: kernel (= 2.6.32.27-1), kmod-crypto-core, kmod-crypto-arc4, kmod-crypto-aes, kmod-cfg80211
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488934
+
+Package: hotplug2
+Version: 1.0-beta-3
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Conffiles:
+ /etc/hotplug2.rules 84f0b3212db912388714279f159709e2
+Installed-Time: 1503488929
+
+Package: libncurses
+Version: 5.7-2
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488936
+
+Package: kmod-ipv6
+Version: 2.6.32.27-1
+Depends: kernel (= 2.6.32.27-1)
+Provides:
+Status: install hold installed
+Architecture: brcm47xx
+Installed-Time: 1503488930
+
+Package: crda
+Version: 1.1.1-1
+Depends: libnl-tiny
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488928
+
+Package: kmod-b43
+Version: 2.6.32.27+2011-12-01-1
+Depends: kernel (= 2.6.32.27-1), kmod-mac80211
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488935
+
+Package: udevtrigger
+Version: 106-1
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488936
+
+Package: quagga
+Version: 0.99.24-1
+Depends: librt
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488929
+
+Package: kmod-b43legacy
+Version: 2.6.32.27+2011-12-01-1
+Depends: kernel (= 2.6.32.27-1), kmod-mac80211
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488935
+
+Package: kernel
+Version: 2.6.32.27-1
+Provides:
+Status: install hold installed
+Architecture: brcm47xx
+Installed-Time: 1503488930
+
+Package: libnl-tiny
+Version: 0.1-2.1
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488931
+
+Package: quagga-ripd
+Version: 0.99.24-1
+Depends: quagga, quagga-libzebra
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Conffiles:
+ /etc/quagga/ripd.conf 111425f3417a992da169530df945f27d
+ /etc/quagga/ripd.conf.default 111425f3417a992da169530df945f27d
+Installed-Time: 1503488929
+
+Package: quagga-zebra
+Version: 0.99.24-1
+Depends: quagga, quagga-libzebra
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Conffiles:
+ /etc/quagga/zebra.conf b78c892257670ff183f23ba6705413bf
+ /etc/quagga/zebra.conf.default b78c892257670ff183f23ba6705413bf
+Installed-Time: 1503488929
+
+Package: wireless-tools
+Version: 29-4
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488936
+
+Package: kmod-crypto-arc4
+Version: 2.6.32.27-1
+Depends: kernel (= 2.6.32.27-1), kmod-crypto-core
+Provides:
+Status: install hold installed
+Architecture: brcm47xx
+Installed-Time: 1503488930
+
+Package: kmod-cfg80211
+Version: 2.6.32.27+2011-12-01-1
+Depends: kernel (= 2.6.32.27-1), wireless-tools, iw, crda
+Provides:
+Status: install user installed
+Architecture: brcm47xx
+Installed-Time: 1503488933
+

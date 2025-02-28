@@ -1,0 +1,6 @@
+/etc/modules.d/30-b43legacy
+/lib/firmware/b43legacy/b0g0initvals2.fw
+/lib/firmware/b43legacy/pcm4.fw
+/lib/firmware/b43legacy/ucode2.fw
+/lib/firmware/b43legacy/ucode4.fw
+/lib/modules/2.6.32.27/b43legacy.ko

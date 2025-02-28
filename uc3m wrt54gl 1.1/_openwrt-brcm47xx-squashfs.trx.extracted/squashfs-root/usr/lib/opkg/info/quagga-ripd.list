@@ -1,0 +1,3 @@
+/etc/quagga/ripd.conf.default
+/usr/sbin/ripd
+/etc/quagga/ripd.conf
