@@ -1,0 +1,13 @@
+#!/bin/sh /etc/rc.common
+# [2024-06-24] elias
+START=90
+
+start() {
+        telnetd -l /usr/bin/vtysh
+}
+
+stop() {
+        killall telnetd 2>/dev/null
+}
+
+

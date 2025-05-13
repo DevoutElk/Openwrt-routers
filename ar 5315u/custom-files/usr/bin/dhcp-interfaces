@@ -1,0 +1,60 @@
+#!/bin/sh /etc/rc.common
+# [2024-06-29] elias
+#
+# Activar y desactivar dhcp en las interfaces fisicas & inalambricas
+
+
+#Activar dhcp
+start(){
+echo -e "Activando \033[1;34mDHCP\033[0m en las \033[1;32minterfaces\033[0m"
+
+uci set dhcp.lan1=dhcp
+uci set dhcp.lan1.interface='lan1'
+uci set dhcp.lan1.start='100'
+uci set dhcp.lan1.limit='150'
+uci set dhcp.lan1.leasetime='12h'
+
+
+uci set dhcp.lan2=dhcp
+uci set dhcp.lan2.interface='lan2'
+uci set dhcp.lan2.start='100'
+uci set dhcp.lan2.limit='150'
+uci set dhcp.lan2.leasetime='12h'
+
+
+uci set dhcp.lan3=dhcp
+uci set dhcp.lan3.interface='lan3'
+uci set dhcp.lan3.start='100'
+uci set dhcp.lan3.limit='150'
+uci set dhcp.lan3.leasetime='12h'
+
+uci set dhcp.lan4=dhcp
+uci set dhcp.lan4.interface='lan4'
+uci set dhcp.lan4.start='100'
+uci set dhcp.lan4.limit='150'
+uci set dhcp.lan4.leasetime='12h'
+
+
+uci set dhcp.wl0=dhcp
+uci set dhcp.wl0.interface='wl0'
+uci set dhcp.wl0.start='100'
+uci set dhcp.wl0.limit='150'
+uci set dhcp.wl0.leasetime='12h'
+
+uci commit dhcp
+}
+
+
+
+# Desactivar dhcp
+stop(){
+echo -e "Activando \033[1;31mDHCP\033[0m en las \033[1;32minterfaces\033[0m"
+
+uci delete dhcp.lan1
+uci delete dhcp.lan2
+uci delete dhcp.lan3
+uci delete dhcp.lan4
+uci delete dhcp.wl0
+
+uci commit dhcp
+}

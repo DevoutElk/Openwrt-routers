@@ -1,0 +1,21 @@
+#!/bin/sh /etc/rc.common
+
+START=98
+
+start(){
+while true; do
+
+if ping -c 1 8.8.8.8 > /dev/null 2>&1; then
+
+        uci set system.@led[0].sysfs='green:inet'
+	uci set system.led[0].trigger='default-on'
+else
+        uci set system.@led[0].sysfs='red:inet'
+	uci set system.@led[0].trigger='default-on'
+fi
+        uci commit system
+        /etc/init.d/led restart
+
+        sleep 20
+done
+}

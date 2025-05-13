@@ -1,0 +1,36 @@
+#!/bin/sh /etc/rc.common
+# [2024-06-22] elias
+#
+# Script utilizado a las limitaciones multi SSID driver b43 
+
+### Activa WAN inalambrica y desactiva AP
+start() {
+echo -e "Activando \033[1;34mWAN\033[0m inalámbrica + \033[1;31mAP\033[0m desactivada"
+	uci set wireless.wifinet0.disabled='1'
+	uci set wireless.wifinet1.disabled='0'
+	uci commit wireless
+	wifi reload
+}
+
+
+### Desactivar WAN inalambrica y activa nuevamente AP
+
+stop() {
+echo -e "Desactivando \033[1;31mWAN\033[0m inalambrica + \033[1;34mAP\033[0m activada"
+	uci set wireless.wifinet0.disabled='0'
+	uci set wireless.wifinet1.disabled='1'
+	uci commit wireless
+	wifi reload
+}
+
+### Desactivar redes inalambricas
+
+disable() {
+echo -e "Desactivando \033[1;31mWAN\033[0m inalambrica + \033[1;31mAP\033[0m desactivada"
+	uci set wireless.wifinet0.disabled='1'
+	uci set wireless.wifinet1.disabled='1'
+	uci commit wireless
+	wifi reload
+}
+
+

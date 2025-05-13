@@ -1,0 +1,24 @@
+#!/bin/sh /etc/rc.common
+## [2024-06-22] elias
+
+start() {
+echo -e "Activando funcionamiento de \033[1;34mWAN\033[0m en \033[1;32mlan1\033[0m"
+	uci set firewall.@zone[0].network='lan2 lan3 lan4 wl0'
+	uci set firewall.@zone[1].network='wan wan6 wan_inalambrica lan1'
+	uci commit firewall
+	uci set dhcp.lan1.ignore='1'
+	uci commit dhcp
+	/etc/init.d/firewall restart
+}
+
+
+stop() {
+echo -e "Desactivando funcionamiento de \033[1;31mWAN\033[0m en \033[1;32mlan1\033[0m"
+	uci set firewall.@zone[1].network='wan wan6 wan_inalambrica'
+	uci set firewall.@zone[0].network='lan1 lan2 lan3 lan4 wl0'
+	uci commit firewall
+	uci set dhcp.lan1.ignore='0'
+	uci commit dhcp
+	/etc/init.d/firewall restart
+}
+

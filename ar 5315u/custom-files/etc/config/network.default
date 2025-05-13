@@ -1,0 +1,77 @@
+### Loopback
+
+config interface 'loopback'
+	option device 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config globals 'globals'
+	option ula_prefix 'fd03:15c4:e836::/48'
+
+### Lan configuracion
+
+config interface 'lan1'
+	option proto 'static'
+	option device 'eth0.1'
+	option ipaddr '192.168.1.1'
+	option netmask '255.255.255.0'
+
+config interface 'lan2'
+	option proto 'static'
+	option device 'eth0.2'
+	option ipaddr '192.168.2.1'
+	option netmask '255.255.255.0'
+
+config interface 'lan3'
+	option proto 'static'
+	option device 'eth0.3'
+	option ipaddr '192.168.3.1'
+	option netmask '255.255.255.0'
+
+config interface 'lan4'
+	option proto 'static'
+	option device 'eth0.4'
+	option ipaddr '192.168.4.1'
+	option netmask '255.255.255.0'
+
+### Wlan configuracion
+
+config interface 'wl0'
+	option proto 'static'
+	option ipaddr '192.168.5.1'
+	option netmask '255.255.255.0'
+	option device 'wl0'
+	
+### Wan inalambrica configuracion
+
+config interface 'wan_inalambrica'
+	option proto 'dhcp'
+	option device 'wan_inalambrica'
+
+### Vlan configuracion
+
+config switch
+        option name 'switch0'
+        option reset '1'
+        option enable_vlan '1'
+
+config switch_vlan
+	option device 'switch0'
+	option vlan '1'
+	option ports '3 8t'
+
+config switch_vlan
+	option device 'switch0'
+	option vlan '2'
+	option ports '2 8t'
+
+config switch_vlan
+	option device 'switch0'
+	option vlan '3'
+	option ports '1 8t'
+
+config switch_vlan
+	option device 'switch0'
+	option ports '0 8t'
+	option vlan '4'
